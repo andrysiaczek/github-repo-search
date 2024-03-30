@@ -1,0 +1,25 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+.user-image {
+  border-radius: 50%;
+  width: 19rem;
+}
+
+.user-details {
+  text-align: left;
+}
+
+.user-details-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.user-details-username {
+  font-weight: 200;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,23 @@
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 0 2rem;
+}
+
+.header-logo svg {
+  height: 2rem;
+  width: fit-content;
+  fill: var(--color-palette-white);
+}
+
+.header-logo-name {
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--color-palette-white);
+}
+
+.header-logo-name span {
+  color: var(--color-palette-orange);
+}

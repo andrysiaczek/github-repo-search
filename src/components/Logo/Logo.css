@@ -1,0 +1,41 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--color-highlight));
+  /* filter: drop-shadow(0 0 2em var(--color-palette-blue)); TODO: */
+}
+
+.logo svg {
+  width: 6.25rem;
+  fill: var(--color-main);
+}
+
+.logo-name {
+  font-weight: 900;
+  font-size: 6rem;
+  color: var(--color-main);
+}
+
+.logo-name span {
+  color: var(--color-palette-orange);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo svg {
+    animation: logo-spin 1s linear forwards;
+  }
+}
