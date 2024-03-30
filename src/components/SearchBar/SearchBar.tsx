@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./SearchBar.css";
+import { Link, useNavigate } from "react-router-dom";
 import ArrowSVG from "./ArrowSVG";
 import MagnifyingGlassSVG from "./MagnifyingGlassSVG";
-import { Link, useNavigate } from "react-router-dom";
+import "./SearchBar.css";
 
 const SearchBar = () => {
   const [username, setUsername] = useState("");

@@ -57,11 +57,11 @@ export type GitHubUser = {
 };
 
 const httpLink = createHttpLink({
-  uri: import.meta.env.VITE_GITHUB_API_URI,
+  uri: import.meta.env.VITE_API_URI,
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = import.meta.env.VITE_GITHUB_PERSONAL_ACCESS_TOKEN;
+  const token = import.meta.env.VITE_API_KEY;
   return {
     headers: {
       ...headers,

@@ -1,22 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MagnifyingGlassSVG from "../SearchBar/MagnifyingGlassSVG";
 import "./HeaderSearchBar.css";
 
 const HeaderSearchBar = () => {
-  const [user, setUser] = useState("");
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUser(event.target.value);
+    setUsername(event.target.value);
   };
 
   const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      handleButtonClick();
+    if (event.key === "Enter" && username.trim() !== "") {
+      navigate(`/user/${username}`);
     }
-  };
-
-  const handleButtonClick = () => {
-    // onClick(user); TODO:
   };
 
   return (
@@ -31,7 +29,7 @@ const HeaderSearchBar = () => {
           placeholder="Search for a new GitHub user ..."
           onChange={handleInputChange}
           onKeyDown={handleInputKeyDown}
-          value={user}
+          value={username}
         />
       </div>
     </div>
