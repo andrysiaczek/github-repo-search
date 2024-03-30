@@ -1,7 +1,23 @@
 import "./App.css";
+import Home from "./pages/Home";
+import UserPage from "./pages/UserPage/UserPage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    // errorElement: <ErrorPage />, TODO:
+  },
+  {
+    path: "/user/:username",
+    element: <UserPage />,
+    // errorElement: <ErrorPage />, TODO:
+  },
+]);
 
 const App = () => {
-  return <></>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;
