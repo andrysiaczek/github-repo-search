@@ -1,0 +1,9 @@
+.user-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  padding: 3rem 0;
+  column-gap: 5rem;
+  row-gap: 3rem;
+}
