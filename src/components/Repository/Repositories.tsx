@@ -25,21 +25,20 @@ const Repositories = ({ repositories }: RepositoriesProps) => {
   };
 
   useEffect(() => {
-    const filteredRepositories = repositories
-      .filter(
-        (repository) =>
-          (!searchName ||
-            repository.name.toLowerCase().includes(searchName.toLowerCase())) &&
-          (!selectedLanguage ||
-            repository.primaryLanguage?.name === selectedLanguage)
-      )
-      .sort((a, b) => a.name.localeCompare(b.name));
+    const filteredRepositories = repositories.filter(
+      (repository) =>
+        (!searchName ||
+          repository.name.toLowerCase().includes(searchName.toLowerCase())) &&
+        (!selectedLanguage ||
+          repository.primaryLanguage?.name === selectedLanguage)
+    );
 
     const uniqueLanguages = Array.from(
       new Set(
         filteredRepositories
           .filter((repository) => repository.primaryLanguage)
           .map((repository) => repository.primaryLanguage!.name)
+          .sort((a, b) => a.localeCompare(b))
       )
     );
 

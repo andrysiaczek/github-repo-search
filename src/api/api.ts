@@ -13,7 +13,10 @@ export const GET_REPOSITORIES = gql`
       name
       avatarUrl
       url
-      repositories(first: 100) {
+      repositories(
+        first: 100
+        orderBy: { field: UPDATED_AT, direction: DESC }
+      ) {
         nodes {
           id
           name
