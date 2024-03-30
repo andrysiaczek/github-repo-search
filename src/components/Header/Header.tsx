@@ -1,11 +1,11 @@
-import HeaderLogo from "../HeaderLogo/HeaderLogo";
 import HeaderSearchBar from "../HeaderSearchBar/HeaderSearchBar";
+import Logo from "../Logo/Logo";
 import "./Header.css";
 
 const Header = () => {
   return (
     <div className="header">
-      <HeaderLogo />
+      <Logo header />
       <HeaderSearchBar />
     </div>
   );

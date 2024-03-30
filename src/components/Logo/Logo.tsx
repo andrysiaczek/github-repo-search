@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom";
-import "./Logo.css";
 import LogoSVG from "./LogoSVG";
+import "./Logo.css";
 
-const Logo = () => {
+interface LogoProps {
+  header?: boolean;
+}
+
+const Logo = ({ header = false }: LogoProps) => {
+  const classNamePrefix = header ? "header-" : "";
+
   return (
     <Link to={`/`}>
-      <div className="logo">
+      <div className={`${classNamePrefix}logo`}>
         <LogoSVG />
-        <div className="logo-name">
+        <div className={`${classNamePrefix}logo-name`}>
           Repo<span>Search</span>
         </div>
       </div>

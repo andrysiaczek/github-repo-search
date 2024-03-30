@@ -21,7 +21,7 @@
 .search-bar-input svg {
   height: 2rem;
   padding: 0 2rem;
-  fill: var(--color-main);
+  fill: var(--color-palette-gray);
 }
 
 .search-bar-input-text {

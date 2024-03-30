@@ -1,4 +1,4 @@
-import { Repository as RepositoryType } from "../../pages/UserPage/UserPage";
+import { Repository as RepositoryType } from "../../api/api";
 import { formatDistanceToNow } from "date-fns";
 
 interface RepositoryProps {
@@ -30,13 +30,13 @@ const Repository = ({ repository }: RepositoryProps) => {
             </>
           )}
         </div>
-        <div className="repository-details-updated-at">
+        <div>
           Updated{" "}
           {formatDistanceToNow(new Date(repository.updatedAt), {
             addSuffix: true,
           })}
         </div>
-        <div className="repository-details-fork-count">
+        <div>
           Forked {repository.forkCount}{" "}
           {repository.forkCount == 1 ? "time" : "times"}
         </div>

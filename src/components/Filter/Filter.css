@@ -1,7 +1,4 @@
-/* .filter { TODO:
-} */
-
-.filter-select {
+.filter {
   height: 2rem;
   background-color: var(--color-highlight);
   color: var(--color-background);

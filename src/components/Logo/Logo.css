@@ -6,8 +6,7 @@
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em var(--color-highlight));
-  /* filter: drop-shadow(0 0 2em var(--color-palette-blue)); TODO: */
+  filter: drop-shadow(0 0 2em var(--color-shadow));
 }
 
 .logo svg {
@@ -38,4 +37,28 @@
   .logo svg {
     animation: logo-spin 1s linear forwards;
   }
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 0 2rem;
+}
+
+.header-logo svg {
+  height: 2rem;
+  width: fit-content;
+  fill: var(--color-palette-white);
+}
+
+.header-logo-name {
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--color-palette-white);
+}
+
+.header-logo-name span {
+  color: var(--color-palette-orange);
 }

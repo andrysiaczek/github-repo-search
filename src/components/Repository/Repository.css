@@ -66,12 +66,6 @@
   font-size: 0.8rem;
 }
 
-/* .repository-details-updated-at {
-}
-
-.repository-details-fork-count {
-} */
-
 .repository-details-language {
   display: flex;
   align-items: center;
