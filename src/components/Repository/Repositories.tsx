@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Repository as RepositoryType } from "../../pages/UserPage/UserPage";
+import { Repository as RepositoryType } from "../../api/api";
+import Filter from "../Filter/Filter";
 import Repository from "./Repository";
 import "./Repository.css";
-import Filter from "../Filter/Filter";
 
 interface RepositoriesProps {
   repositories: RepositoryType[];
@@ -59,7 +59,7 @@ const Repositories = ({ repositories }: RepositoriesProps) => {
           onChange={handleInputChange}
           value={searchName}
           autoFocus
-        ></input>
+        />
         <Filter
           languages={uniqueLanguages}
           selectedLanguage={selectedLanguage}

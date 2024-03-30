@@ -1,4 +1,4 @@
-import { GitHubUser } from "../../pages/UserPage/UserPage";
+import { GitHubUser } from "../../api/api";
 import "./User.css";
 
 interface UserProps {
@@ -12,7 +12,7 @@ const User = ({ user }: UserProps) => {
         className="user-image"
         src={user.avatarUrl}
         alt="User profile picture"
-      ></img>
+      />
       <div className="user-details">
         <a href={user.url}>
           <div className="user-details-name">{user.name}</div>

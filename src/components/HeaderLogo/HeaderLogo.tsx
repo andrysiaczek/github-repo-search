@@ -1,6 +1,6 @@
-import "./HeaderLogo.css";
-import LogoSVG from "../Logo/LogoSVG";
 import { Link } from "react-router-dom";
+import LogoSVG from "../Logo/LogoSVG";
+import "./HeaderLogo.css";
 
 const HeaderLogo = () => {
   return (

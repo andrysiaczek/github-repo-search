@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./HeaderSearchBar.css";
 import MagnifyingGlassSVG from "../SearchBar/MagnifyingGlassSVG";
+import "./HeaderSearchBar.css";
 
 const HeaderSearchBar = () => {
   const [user, setUser] = useState("");

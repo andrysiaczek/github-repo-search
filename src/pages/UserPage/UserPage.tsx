@@ -1,59 +1,10 @@
-import User from "../../components/User/User";
-import Header from "../../components/Header/Header";
-import { useQuery, gql } from "@apollo/client";
-import Repositories from "../../components/Repository/Repositories";
-import "./UserPage.css";
 import { useParams } from "react-router-dom";
-
-const GET_REPOSITORIES = gql`
-  query GetRepositories($login: String!) {
-    user(login: $login) {
-      login
-      name
-      avatarUrl
-      url
-      repositories(first: 100) {
-        nodes {
-          id
-          name
-          description
-          url
-          updatedAt
-          primaryLanguage {
-            name
-            color
-          }
-          forkCount
-        }
-      }
-    }
-  }
-`;
-
-export type Language = {
-  name: string;
-  color: string;
-};
-
-export type Repository = {
-  id: string;
-  name: string;
-  description: string;
-  url: string;
-  updatedAt: Date;
-  primaryLanguage?: Language;
-  forkCount: number;
-};
-
-export type GitHubUser = {
-  login: string;
-  name: string;
-  avatarUrl: string;
-  url: string;
-  repositories: {
-    nodes: Repository[];
-  };
-};
+import { useQuery } from "@apollo/client";
+import Header from "../../components/Header/Header";
+import Repositories from "../../components/Repository/Repositories";
+import User from "../../components/User/User";
+import "./UserPage.css";
+import { GET_REPOSITORIES, GitHubUser } from "../../api/api";
 
 const UserPage = () => {
   const { username } = useParams();
