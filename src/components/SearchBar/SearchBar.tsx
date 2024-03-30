@@ -4,7 +4,12 @@ import ArrowSVG from "./ArrowSVG";
 import MagnifyingGlassSVG from "./MagnifyingGlassSVG";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+interface SearchBarProps {
+  header?: boolean;
+}
+
+const SearchBar = ({ header = false }: SearchBarProps) => {
+  const classNamePrefix = header ? "header-" : "";
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
 
@@ -19,24 +24,26 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="search-bar">
-      <div className="search-bar-input">
+    <div className={`${classNamePrefix}search-bar`}>
+      <div className={`${classNamePrefix}search-bar-input`}>
         <MagnifyingGlassSVG />
         <input
           id="search-bar-input"
           name="search-bar-input-text"
-          className="search-bar-input-text"
+          className={`${classNamePrefix}search-bar-input-text`}
           type="text"
           placeholder="Search for a GitHub user ..."
           onChange={handleInputChange}
           onKeyDown={handleInputKeyDown}
           value={username}
-          autoFocus
+          autoFocus={!header}
         />
       </div>
-      <Link to={`user/${username}`} className="search-bar-button">
-        <ArrowSVG />
-      </Link>
+      {!header && (
+        <Link to={`user/${username}`} className="search-bar-button">
+          <ArrowSVG />
+        </Link>
+      )}
     </div>
   );
 };
