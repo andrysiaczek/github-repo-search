@@ -81,3 +81,49 @@
 .repository-details-language-name {
   font-size: 0.8rem;
 }
+
+.no-repos-found {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.no-repos-found-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+}
+
+.no-repos-found-message-main {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.no-repos-found-message-main span {
+  color: var(--color-highlight-reverse);
+  font-weight: 600;
+}
+
+.no-repos-found-message-secondary {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.no-repos-found svg {
+  align-self: center;
+  height: 20rem;
+}
+
+.no-repos-found svg path {
+  fill: var(--color-highlight);
+}
+
+.no-repos-found svg path:first-child {
+  fill: var(--color-palette-gray);
+}
+
+.no-repos-found svg path:last-child {
+  fill: var(--color-palette-gray);
+}

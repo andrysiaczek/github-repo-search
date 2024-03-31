@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import { Repository as RepositoryType } from "../../api/api";
 import Filter from "../Filter/Filter";
+import NoReposFound from "./NoReposFound";
 import Repository from "./Repository";
 import "./Repository.css";
 
 interface RepositoriesProps {
   repositories: RepositoryType[];
+  userName: string;
 }
 
-const Repositories = ({ repositories }: RepositoriesProps) => {
+const Repositories = ({ repositories, userName }: RepositoriesProps) => {
   const [filteredRepositories, setFilteredRepositories] = useState<
     RepositoryType[]
   >([]);
@@ -66,12 +68,20 @@ const Repositories = ({ repositories }: RepositoriesProps) => {
         />
       </div>
       <hr className="repositories-hr" />
-      {filteredRepositories.map((repository) => (
-        <div key={repository.id}>
-          <Repository repository={repository} />
-          <hr className="repositories-hr" />
-        </div>
-      ))}
+      {filteredRepositories.length === 0 ? (
+        <NoReposFound
+          language={selectedLanguage}
+          searchName={searchName}
+          userName={userName}
+        />
+      ) : (
+        filteredRepositories.map((repository) => (
+          <div key={repository.id}>
+            <Repository repository={repository} />
+            <hr className="repositories-hr" />
+          </div>
+        ))
+      )}
     </div>
   );
 };

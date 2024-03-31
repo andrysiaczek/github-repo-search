@@ -18,6 +18,7 @@
   --color-secondary: var(--color-palette-blue);
   --color-background: var(--color-palette-dark-gray);
   --color-highlight: var(--color-palette-blue);
+  --color-highlight-reverse: var(--color-palette-orange);
   --color-shadow: var(--color-palette-blue);
 
   font-synthesis: none;
@@ -52,6 +53,7 @@ body {
     --color-secondary: var(--color-palette-dark-gray);
     --color-background: var(--color-palette-white);
     --color-highlight: var(--color-palette-orange);
+    --color-highlight-reverse: var(--color-palette-blue);
     --color-shadow: var(--color-palette-gray);
   }
 }

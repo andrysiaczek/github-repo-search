@@ -22,7 +22,10 @@ const UserPage = () => {
       <Header />
       <div className="user-page">
         <User user={user} />
-        <Repositories repositories={user.repositories.nodes} />
+        <Repositories
+          repositories={user.repositories.nodes}
+          userName={user.login}
+        />
       </div>
     </>
   );
