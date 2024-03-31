@@ -8,3 +8,55 @@
   column-gap: 5rem;
   row-gap: 3rem;
 }
+
+.no-user-found {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.no-user-found-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+}
+
+.no-user-found-message-main {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.no-user-found-message-main span {
+  color: var(--color-highlight-reverse);
+  font-weight: 600;
+}
+
+.no-user-found-message-secondary {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.no-user-found-message-secondary span {
+  border: 1px solid var(--color-palette-gray);
+  border-radius: 3px;
+  padding: 1px 2px 2px 2px;
+}
+
+.no-user-found svg {
+  align-self: center;
+  height: 20rem;
+}
+
+.no-user-found svg path {
+  fill: var(--color-highlight);
+}
+
+.no-user-found svg path:first-child {
+  fill: var(--color-palette-gray);
+}
+
+.no-user-found svg path:last-child {
+  fill: var(--color-palette-gray);
+}
