@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ArrowSVG from "./ArrowSVG";
 import MagnifyingGlassSVG from "./MagnifyingGlassSVG";
@@ -22,6 +22,21 @@ const SearchBar = ({ header = false }: SearchBarProps) => {
       navigate(`/user/${username}`);
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "/") {
+        event.preventDefault();
+        document.getElementById("search-bar-input")?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className={`${classNamePrefix}search-bar`}>

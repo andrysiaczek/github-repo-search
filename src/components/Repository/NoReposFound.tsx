@@ -1,5 +1,4 @@
 import NoReposFoundSVG from "./NoReposFoundSVG";
-import "./Repository.css";
 
 interface NoReposFoundProps {
   language: string;
