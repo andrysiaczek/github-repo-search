@@ -42,7 +42,7 @@ To run the project locally follow these steps.
    ```sh
    yarn
    ```
-4. Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) and assign it to VITE_API_KEY variable in .env file
+4. Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
 5. Enter your personal access token in `.env`
    ```js
    VITE_API_KEY = "ENTER YOUR PERSONAL ACCESS TOKEN";
@@ -51,7 +51,7 @@ To run the project locally follow these steps.
    ```sh
    yarn dev
    ```
-7. Open a web browser and go to http://localhost:5173 to view the application.
+7. Open a web browser and go to http://localhost:5173 to view the application
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
