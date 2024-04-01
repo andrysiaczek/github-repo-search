@@ -19,7 +19,8 @@ const Repositories = ({ repositories, userName }: RepositoriesProps) => {
   const [uniqueLanguages, setUniqueLanguages] = useState<string[]>([]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchName(event.target.value);
+    if (event.target.value.trim() !== "" || event.target.value.length === 0)
+      setSearchName(event.target.value);
   };
 
   const handleLanguageSelect = (language: string) => {
