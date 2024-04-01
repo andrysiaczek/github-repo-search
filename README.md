@@ -55,6 +55,18 @@ To run the project locally follow these steps.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Deployment
+
+The project is being continuously deployed and accessible on [Netlify](https://main--repo-search-aa.netlify.app/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Design
+
+The application was designed using [Figma](https://www.figma.com/file/yKUhz6UmDVMo9LPvxZUxKr/RepoSearch?type=design&node-id=0%3A1&mode=design&t=YjnQMdbphfC1PtoS-1).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
