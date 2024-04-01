@@ -1,18 +1,19 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./App.css";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import Home from "./pages/Home/Home";
 import UserPage from "./pages/UserPage/UserPage";
+import "./App.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    // errorElement: <ErrorPage />, TODO:
+    errorElement: <ErrorBoundary />,
   },
   {
     path: "/user/:username",
     element: <UserPage />,
-    // errorElement: <ErrorPage />, TODO:
+    errorElement: <ErrorBoundary />,
   },
 ]);
 

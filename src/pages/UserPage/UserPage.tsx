@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_REPOSITORIES, GitHubUser } from "../../api/api";
 import Header from "../../components/Header/Header";
+import Loading from "../../components/Loading/Loading";
 import Repositories from "../../components/Repository/Repositories";
 import User from "../../components/User/User";
 import NoUserFound from "./NoUserFound";
@@ -13,16 +14,9 @@ const UserPage = () => {
     variables: { login: username },
   });
 
-  if (loading) return <p>Loading...</p>;
-  if (
-    error &&
-    error.message.includes("Could not resolve to a User with the login of")
-  )
-    return (
-      <>
-        <NoUserFound userName={username || ""} />
-      </>
-    );
+  if (loading) return <Loading />;
+  if (error?.message.includes("Could not resolve to a User with the login of"))
+    return <NoUserFound userName={username || ""} />;
 
   const user: GitHubUser = data.user;
 

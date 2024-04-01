@@ -1,0 +1,11 @@
+.error-boundary svg {
+  height: 10rem;
+}
+
+.error-boundary svg path {
+  stroke: var(--color-highlight);
+}
+
+.error-boundary svg ellipse {
+  fill: var(--color-highlight);
+}
