@@ -1,30 +1,61 @@
-# React + TypeScript + Vite
+<a name="readme-top"></a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/andrysiaczek/github-repo-search">
+    <img src="./public/dark-mode-favicon.svg" alt="Logo" width="80" height="80">
+  </a>
 
-Currently, two official plugins are available:
+<h3 align="center">Repo Search</h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <p align="center">
+    A React-based web application that allows users to search and explore GitHub repositories effortlessly. With intuitive filtering options, users can easily discover repositories by name and programming language, enhancing their GitHub browsing experience.
+    <br />
+  </p>
+</div>
 
-## Expanding the ESLint configuration
+<!-- GETTING STARTED -->
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+To run the project locally follow these steps.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Prerequisites
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Install yarn using npm
+  ```sh
+  npm install -g yarn
+  ```
+
+### Installation
+
+1. Clone the repository
+   ```sh
+   git clone https://github.com/andrysiaczek/github-repo-search.git
+   ```
+2. Navigate to the project directory
+   ```sh
+   cd github-repo-search
+   ```
+3. Install dependencies
+   ```sh
+   yarn
+   ```
+4. Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) and assign it to VITE_API_KEY variable in .env file
+5. Enter your personal access token in `.env`
+   ```js
+   VITE_API_KEY = "ENTER YOUR PERSONAL ACCESS TOKEN";
+   ```
+6. Start the development server
+   ```sh
+   yarn dev
+   ```
+7. Open a web browser and go to http://localhost:5173 to view the application.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
