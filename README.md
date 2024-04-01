@@ -45,7 +45,7 @@ To run the project locally follow these steps.
 4. Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
 5. Enter your personal access token in `.env`
    ```js
-   VITE_API_KEY = "ENTER YOUR PERSONAL ACCESS TOKEN";
+   VITE_API_KEY = <ENTER YOUR PERSONAL ACCESS TOKEN>
    ```
 6. Start the development server
    ```sh
