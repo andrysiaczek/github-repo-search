@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ArrowSVG from "./ArrowSVG";
 import MagnifyingGlassSVG from "./MagnifyingGlassSVG";
 import "./SearchBar.css";
@@ -14,12 +14,22 @@ const SearchBar = ({ header = false }: SearchBarProps) => {
   const navigate = useNavigate();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUsername(event.target.value);
+    const inputUsername = event.target.value.trim();
+    if (inputUsername !== "" || event.target.value.length === 0)
+      setUsername(event.target.value);
   };
 
   const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter" && username.trim() !== "") {
-      navigate(`/user/${username}`);
+    const inputUsername = username.trim();
+    if (event.key === "Enter" && inputUsername !== "") {
+      navigate(`/user/${inputUsername}`);
+    }
+  };
+
+  const handleOnClick = () => {
+    const inputUsername = username.trim();
+    if (inputUsername !== "") {
+      navigate(`/user/${inputUsername}`);
     }
   };
 
@@ -55,9 +65,9 @@ const SearchBar = ({ header = false }: SearchBarProps) => {
         />
       </div>
       {!header && (
-        <Link to={`user/${username}`} className="search-bar-button">
+        <div onClick={handleOnClick} className="search-bar-button">
           <ArrowSVG />
-        </Link>
+        </div>
       )}
     </div>
   );
